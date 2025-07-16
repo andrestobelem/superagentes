@@ -1,0 +1,34 @@
+---
+globs: "*.py"
+---
+
+# Python Code Standards
+
+## Code Style
+- Use Black for code formatting (already configured in [Pipfile](mdc:Pipfile))
+- Follow PEP 8 conventions
+- Use type hints for function parameters and return values
+- Write docstrings for all functions, classes, and modules using Google style
+
+## Naming Conventions
+- Variables and functions: `snake_case`
+- Classes: `PascalCase`
+- Constants: `UPPER_CASE`
+- Private attributes: `_leading_underscore`
+- All names must be in English
+
+## Error Handling
+- Use specific exception types, not generic `Exception`
+- Always provide meaningful error messages
+- Use try-except blocks appropriately
+
+## Imports
+- Group imports in this order: standard library, third-party, local
+- Use absolute imports when possible
+- Sort imports alphabetically within each group
+
+## Documentation
+- Write clear, concise docstrings
+- Include examples in docstrings for complex functions
+- Comments should be in English only
+- Use inline comments sparingly and make them meaningful
