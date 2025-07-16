@@ -1,0 +1,44 @@
+---
+description: "Commit messages and documentation standards"
+---
+
+# Commit Messages and Documentation Standards
+
+## Commit Messages
+- **MUST** follow Conventional Commits specification
+- **MUST** be written in English (never Spanish)
+- **MUST** use lowercase for type and description
+- **MUST** not have unnecessary capitalization
+
+### Format
+```
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer]
+```
+
+### Types
+- `feat`: new feature
+- `fix`: bug fix
+- `docs`: documentation changes
+- `style`: code style changes (formatting, etc.)
+- `refactor`: code refactoring
+- `test`: adding or fixing tests
+- `chore`: maintenance tasks
+
+### Examples
+```
+feat(auth): add user authentication system
+fix(api): resolve database connection timeout
+docs(readme): update installation instructions
+style(formatting): apply black formatting to main module
+```
+
+## Documentation
+- README files should be clear and concise
+- Include installation and usage instructions
+- Keep documentation in English
+- Update documentation when making changes
+- Use markdown for documentation files
