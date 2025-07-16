@@ -1,0 +1,38 @@
+---
+globs: "test_*.py,*_test.py,tests/"
+---
+
+# Testing and Code Quality Standards
+
+## Test Structure
+- Place tests in `tests/` directory or name test files with `test_` prefix
+- Use pytest as the testing framework
+- Follow AAA pattern: Arrange, Act, Assert
+- Test functions should start with `test_`
+- Test classes should start with `Test`
+
+## Test Coverage
+- Aim for high test coverage (80%+)
+- Test both happy path and edge cases
+- Test error conditions and exception handling
+- Write integration tests for complex workflows
+
+## Test Organization
+- Group related tests in classes
+- Use descriptive test names that explain what is being tested
+- Use fixtures for common test setup
+- Mock external dependencies appropriately
+
+## Code Quality
+- Run Black formatter before committing
+- Use type hints consistently
+- Write meaningful variable and function names
+- Keep functions small and focused
+- Follow single responsibility principle
+
+## Before Committing
+- Run tests locally
+- Ensure Black formatting is applied
+- Check that imports are properly organized
+- Verify all code is in English
+- Review commit message follows Conventional Commits
