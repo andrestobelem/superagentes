@@ -1,0 +1,41 @@
+---
+description: "AI agents development patterns and best practices"
+---
+
+# AI Agents Development Guidelines
+
+## Agent Architecture
+- Design agents with clear, single responsibilities
+- Use modular design for agent components
+- Implement proper error handling and recovery mechanisms
+- Consider agent state management and persistence
+
+## Agent Communication
+- Define clear interfaces for agent interactions
+- Use structured data formats (JSON, Protocol Buffers)
+- Implement proper logging for agent actions and decisions
+- Design for asynchronous communication patterns
+
+## Agent Behavior
+- Make agent decisions transparent and explainable
+- Implement configurable agent parameters
+- Use proper prompt engineering techniques
+- Consider safety and ethical guidelines
+
+## Code Organization
+- Separate agent logic from infrastructure code
+- Use dependency injection for agent components
+- Implement proper configuration management
+- Create reusable agent utilities and helpers
+
+## Testing AI Agents
+- Mock external AI services for testing
+- Test agent decision-making logic separately
+- Create integration tests for agent workflows
+- Use deterministic testing approaches where possible
+
+## Documentation
+- Document agent capabilities and limitations
+- Include examples of agent usage
+- Explain agent decision-making processes
+- Provide troubleshooting guides for common issues
