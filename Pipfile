@@ -7,7 +7,15 @@ name = "pypi"
 
 [dev-packages]
 black = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.13"
 python_full_version = "3.13.5"
+
+[scripts]
+test = "pytest tests/ -v"
+test-cov = "pytest tests/ --cov=hello_world --cov-report=term-missing --cov-report=html"
+test-cov-html = "pytest tests/ --cov=hello_world --cov-report=html"
+format = "black ."
