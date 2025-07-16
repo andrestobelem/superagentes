@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "notebook.defaultFormatter": "ms-python.black-formatter",
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
+}
