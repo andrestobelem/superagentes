@@ -1,4 +1,5 @@
 # Súper Agentes
+
 Super Agents
 
 ## Development Environment Setup
@@ -35,12 +36,14 @@ pip install pipenv
 ### Project Setup
 
 1. **Clone the repository** (if you haven't already):
+
 ```bash
 git clone https://github.com/andrestobelem/superagentes
 cd superagentes
 ```
 
-2. **Install the correct Python version**:
+2.**Install the correct Python version**:
+
 ```bash
 # Install Python 3.13.5 using pyenv
 pyenv install 3.13.5
@@ -49,7 +52,8 @@ pyenv install 3.13.5
 pyenv local 3.13.5
 ```
 
-3. **Create and activate the virtual environment**:
+3.**Create and activate the virtual environment**:
+
 ```bash
 # Create the virtual environment with pipenv and install all dependencies
 pipenv install --dev
@@ -86,7 +90,16 @@ pipenv install package-name
 pipenv install --dev package-name
 
 # Format code with black
-black .
+pipenv run format
+
+# Run tests
+pipenv run test
+
+# Run tests with coverage report
+pipenv run test-cov
+
+# Run tests and generate HTML coverage report
+pipenv run test-cov-html
 
 # View installed dependencies
 pipenv graph
@@ -97,13 +110,158 @@ exit
 
 ### Project Structure
 
-```
+```text
 superagentes/
 ├── Pipfile              # Dependency configuration
 ├── Pipfile.lock         # Exact dependency versions
 ├── .venv/               # Virtual environment (created automatically)
+├── hello_world/         # Hello World module
+│   ├── __init__.py
+│   ├── __main__.py
+│   └── hello.py
+├── tests/               # Test files
+│   └── test_hello_world.py
+├── example.py           # Example usage
 └── README.md           # This file
 ```
+
+### Hello World Module
+
+The `hello_world` module provides simple greeting functionality with support for multiple languages.
+
+#### Features
+
+- **Basic greetings**: Simple hello world functionality
+- **Multi-language support**: Greetings in English, Spanish, French, German, and Italian
+- **Default fallback**: Falls back to English for unsupported languages
+- **Easy to use**: Simple function calls with optional parameters
+
+#### Usage
+
+##### Basic Usage
+
+```python
+from hello_world import say_hello, get_greeting
+
+# Basic hello world
+print(say_hello())  # Output: Hello, World!
+
+# Greet a specific person
+print(say_hello("Alice"))  # Output: Hello, Alice!
+```
+
+##### Multi-language Greetings
+
+```python
+from hello_world import get_greeting
+
+# English (default)
+print(get_greeting("Bob", "en"))  # Output: Hello, Bob!
+
+# Spanish
+print(get_greeting("Carlos", "es"))  # Output: ¡Hola, Carlos!
+
+# French
+print(get_greeting("Marie", "fr"))  # Output: Bonjour, Marie!
+
+# German
+print(get_greeting("Hans", "de"))  # Output: Hallo, Hans!
+
+# Italian
+print(get_greeting("Marco", "it"))  # Output: Ciao, Marco!
+```
+
+##### Default Language Fallback
+
+```python
+# Unknown language falls back to English
+print(get_greeting("Unknown", "xx"))  # Output: Hello, Unknown!
+```
+
+#### Running the Module Demo
+
+You can run a demonstration of all features:
+
+```bash
+# Run as a module
+python -m hello_world
+
+# Or from within the virtual environment
+pipenv run python -m hello_world
+```
+
+This will output:
+
+```text
+=== Hello World Module Demo ===
+
+1. Basic usage:
+   Hello, World!
+   Hello, Alice!
+
+2. Multi-language greetings:
+   English: Hello, Bob!
+   Spanish: ¡Hola, Carlos!
+   French:  Bonjour, Marie!
+   German:  Hallo, Hans!
+   Italian: Ciao, Marco!
+
+3. Default language fallback:
+   Unknown language: Hello, Unknown!
+
+=== Demo completed ===
+```
+
+#### API Reference
+
+##### `say_hello(name: str = "World") -> str`
+
+Returns a simple greeting message.
+
+- **Parameters:**
+  - `name` (str): The name to greet. Defaults to "World".
+- **Returns:**
+  - `str`: A greeting message in English.
+
+##### `get_greeting(name: str = "World", language: str = "en") -> str`
+
+Returns a greeting in the specified language.
+
+- **Parameters:**
+  - `name` (str): The name to greet. Defaults to "World".
+  - `language` (str): The language code. Supported: "en", "es", "fr", "de", "it". Defaults to "en".
+- **Returns:**
+  - `str`: A greeting message in the specified language, or English if language is not supported.
+
+### Testing
+
+The project includes automated testing with pytest and coverage reporting:
+
+#### Running Tests
+
+```bash
+# Run all tests with verbose output
+pipenv run test
+
+# Run tests with coverage report in terminal
+pipenv run test-cov
+
+# Run tests and generate HTML coverage report
+pipenv run test-cov-html
+```
+
+#### Coverage Reports
+
+- **Terminal Coverage**: Shows coverage percentage and missing lines in the terminal
+- **HTML Coverage**: Generates a detailed HTML report in `htmlcov/` directory
+  - Open `htmlcov/index.html` in your browser to view the full report
+  - Shows line-by-line coverage with highlighted missing lines
+
+#### Test Structure
+
+- Tests are located in the `tests/` directory
+- Test files follow the naming convention: `test_*.py`
+- Each test function should start with `test_`
 
 ### Important Notes
 
