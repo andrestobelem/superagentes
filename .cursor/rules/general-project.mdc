@@ -1,0 +1,24 @@
+---
+alwaysApply: true
+---
+
+# Superagentes Project Rules
+
+## Project Overview
+This is a Python 3.13 project called "superagentes" that appears to be related to AI agents.
+
+## Language Guidelines
+- **Conversation Language**: Spanish (Argentine dialect) unless explicitly switched to English
+- **Code Language**: All code, comments, variable names, functions, files, and documentation must be written in English
+- **No mixing**: Never mix Spanish and English in code - keep code strictly in English
+
+## Project Structure
+- Main configuration: [Pipfile](mdc:Pipfile) manages dependencies
+- Python version: 3.13.5
+- Virtual environment: `.venv/` directory
+- Code formatting: Uses Black for Python code formatting
+
+## Development Environment
+- Uses Pipenv for dependency management
+- Virtual environment located in `.venv/`
+- Git repository with conventional commit messages required
